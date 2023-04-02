@@ -1,12 +1,11 @@
-name: Build and test
+name: build-test
 
-on:
-  [pull_request]
+on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy
+    strategy:
       matrix:
         node: ['16']
     steps:
