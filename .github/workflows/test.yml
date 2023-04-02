@@ -1,0 +1,22 @@
+name: Build and test
+
+on:
+  [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy
+      matrix:
+        node: ['16']
+    steps:
+      - name: Checkout 🛎️
+      - uses: actions/checkout@v3
+
+      - name: Setup Node 16
+        uses: actions/setup-node@2
+        width:
+          node-version: 16.x
+
+      - run: npm install
+      - run: npm run lint
