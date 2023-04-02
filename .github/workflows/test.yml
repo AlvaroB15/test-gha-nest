@@ -10,7 +10,7 @@ jobs:
         node: ['16']
     steps:
       - name: Checkout 🛎️
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Setup Node 16
         uses: actions/setup-node@2
